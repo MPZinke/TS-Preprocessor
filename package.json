@@ -1,0 +1,43 @@
+{
+	"name": "ts-preprocessor",
+	"version": "0.0.0",
+	"description": "A packagee to run proprocessor macros on TypeScript files",
+	"main": "./dist/Preprocessor.js",
+	"bin":
+	{
+		"ts-preprocessor": "./bin/ts-preprocessor"
+	},
+	"scripts":
+	{
+		"build": "tsc",
+		"test": "test"
+	},
+	"repository":
+	{
+		"type": "git",
+		"url": "git+https://github.com/MPZinke/TS-Preprocessor.git"
+	},
+	"keywords":
+	[
+		"TypeScript",
+		"JavaScript",
+		"Preprocessor"
+	],
+	"author": "MPZinke",
+	"license": "GPL-3.0-or-later",
+	"bugs":
+	{
+		"url": "https://github.com/MPZinke/TS-Preprocessor/issues"
+	},
+	"homepage": "https://github.com/MPZinke/TS-Preprocessor#readme",
+	"dependencies":
+	{
+		"fs": "^0.0.1-security",
+		"path": "^0.12.7"
+	},
+	"devDependencies":
+	{
+		"@types/node": "^20.9.2",
+		"typescript": "^5.2.2"
+	}
+}

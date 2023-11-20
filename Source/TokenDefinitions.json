@@ -1,0 +1,802 @@
+[
+    {
+        "id": 2,
+        "name": "SingleLineCommentTrivia",
+        "regex": "^\\/\\/.*"
+    },
+    {
+        "id": 3,
+        "name": "MultiLineCommentTrivia",
+        "regex": "^\\/\\*(\\n|.)*\\*\\/"
+    },
+    {
+        "id": 4,
+        "name": "NewLineTrivia",
+        "regex": "^(\\n\\r?)+"
+    },
+    {
+        "id": 5,
+        "name": "WhitespaceTrivia",
+        "regex": "^[ \\t]+"
+    },
+    {
+        "id": 6,
+        "name": "ShebangTrivia",
+        "regex": "^"
+    },
+    {
+        "id": 7,
+        "name": "ConflictMarkerTrivia",
+        "regex": "^"
+    },
+    {
+        "id": 8,
+        "name": "NonTextFileMarkerTrivia",
+        "regex": "^"
+    },
+    {
+        "id": 9,
+        "name": "NumericLiteral",
+        "regex": "^[0-9]*.[0-9]+"
+    },
+    {
+        "id": 10,
+        "name": "BigIntLiteral",
+        "regex": "^(0o[_0-7]+|0x[_0-9a-fA-F]+|0b[_01]+|[0-9]+)"
+    },
+    {
+        "id": 11,
+        "name": "StringLiteral",
+        "regex": "^(\\\"([^\\\\\\\"]|\\\\.)*\\\")|(\\'([^\\\\\\']|\\\\.)*\\')"
+    },
+    {
+        "id": 16,
+        "name": "TemplateHead",
+        "regex": "^`(\\\\.|([^$`]|\\$[^{]))*(\\${|`)"
+    },
+    {
+        "id": 17,
+        "name": "TemplateMiddle",
+        "regex": "^}(\\\\.|([^$`]|\\$[^{]))*(\\${|`)"
+    },
+    {
+        "id": 25,
+        "name": "DotToken",
+        "regex": "^\\."
+    },
+    {
+        "id": 26,
+        "name": "DotDotDotToken",
+        "regex": "^\\.\\.\\."
+    },
+    {
+        "id": 27,
+        "name": "SemicolonToken",
+        "regex": "^;"
+    },
+    {
+        "id": 28,
+        "name": "CommaToken",
+        "regex": "^,"
+    },
+    {
+        "id": 30,
+        "name": "LessThanToken",
+        "regex": "^<"
+    },
+    {
+        "id": 19,
+        "name": "OpenBraceToken",
+        "regex": "^{"
+    },
+    {
+        "id": 20,
+        "name": "CloseBraceToken",
+        "regex": "^\\}"
+    },
+    {
+        "id": 21,
+        "name": "OpenParenToken",
+        "regex": "^\\("
+    },
+    {
+        "id": 22,
+        "name": "CloseParenToken",
+        "regex": "^\\)"
+    },
+    {
+        "id": 23,
+        "name": "OpenBracketToken",
+        "regex": "^\\["
+    },
+    {
+        "id": 24,
+        "name": "CloseBracketToken",
+        "regex": "^\\]"
+    },
+    {
+        "id": 29,
+        "name": "QuestionDotToken",
+        "regex": "^\\?\\."
+    },
+    {
+        "id": 31,
+        "name": "LessThanSlashToken",
+        "regex": "^<\\/"
+    },
+    {
+        "id": 32,
+        "name": "GreaterThanToken",
+        "regex": "^>"
+    },
+    {
+        "id": 33,
+        "name": "LessThanEqualsToken",
+        "regex": "^<="
+    },
+    {
+        "id": 34,
+        "name": "GreaterThanEqualsToken",
+        "regex": "^>="
+    },
+    {
+        "id": 35,
+        "name": "EqualsEqualsToken",
+        "regex": "^=="
+    },
+    {
+        "id": 36,
+        "name": "ExclamationEqualsToken",
+        "regex": "^!="
+    },
+    {
+        "id": 37,
+        "name": "EqualsEqualsEqualsToken",
+        "regex": "^==="
+    },
+    {
+        "id": 38,
+        "name": "ExclamationEqualsEqualsToken",
+        "regex": "^!=="
+    },
+    {
+        "id": 39,
+        "name": "EqualsGreaterThanToken",
+        "regex": "^=>"
+    },
+    {
+        "id": 40,
+        "name": "PlusToken",
+        "regex": "^\\+"
+    },
+    {
+        "id": 41,
+        "name": "MinusToken",
+        "regex": "^\\-"
+    },
+    {
+        "id": 42,
+        "name": "AsteriskToken",
+        "regex": "^\\*"
+    },
+    {
+        "id": 43,
+        "name": "AsteriskAsteriskToken",
+        "regex": "^\\*\\*"
+    },
+    {
+        "id": 44,
+        "name": "SlashToken",
+        "regex": "^\\/"
+    },
+    {
+        "id": 45,
+        "name": "PercentToken",
+        "regex": "^%"
+    },
+    {
+        "id": 46,
+        "name": "PlusPlusToken",
+        "regex": "^\\+\\+"
+    },
+    {
+        "id": 47,
+        "name": "MinusMinusToken",
+        "regex": "^\\-\\-"
+    },
+    {
+        "id": 48,
+        "name": "LessThanLessThanToken",
+        "regex": "^<<"
+    },
+    {
+        "id": 49,
+        "name": "GreaterThanGreaterThanToken",
+        "regex": "^>>"
+    },
+    {
+        "id": 50,
+        "name": "GreaterThanGreaterThanGreaterThanToken",
+        "regex": "^>>>"
+    },
+    {
+        "id": 51,
+        "name": "AmpersandToken",
+        "regex": "^&"
+    },
+    {
+        "id": 52,
+        "name": "BarToken",
+        "regex": "^\\|"
+    },
+    {
+        "id": 53,
+        "name": "CaretToken",
+        "regex": "^\\^"
+    },
+    {
+        "id": 54,
+        "name": "ExclamationToken",
+        "regex": "^!"
+    },
+    {
+        "id": 55,
+        "name": "TildeToken",
+        "regex": "^~"
+    },
+    {
+        "id": 56,
+        "name": "AmpersandAmpersandToken",
+        "regex": "^&&"
+    },
+    {
+        "id": 57,
+        "name": "BarBarToken",
+        "regex": "^\\|\\|"
+    },
+    {
+        "id": 58,
+        "name": "QuestionToken",
+        "regex": "^\\?"
+    },
+    {
+        "id": 59,
+        "name": "ColonToken",
+        "regex": "^:"
+    },
+    {
+        "id": 60,
+        "name": "AtToken",
+        "regex": "^@"
+    },
+    {
+        "id": 61,
+        "name": "QuestionQuestionToken",
+        "regex": "^\\?\\?"
+    },
+    {
+        "id": 62,
+        "name": "BacktickToken",
+        "regex": "^`"
+    },
+    {
+        "id": 63,
+        "name": "HashToken",
+        "regex": "^#"
+    },
+    {
+        "id": 64,
+        "name": "EqualsToken",
+        "regex": "^="
+    },
+    {
+        "id": 65,
+        "name": "PlusEqualsToken",
+        "regex": "^\\+="
+    },
+    {
+        "id": 66,
+        "name": "MinusEqualsToken",
+        "regex": "^\\-="
+    },
+    {
+        "id": 67,
+        "name": "AsteriskEqualsToken",
+        "regex": "^\\*="
+    },
+    {
+        "id": 68,
+        "name": "AsteriskAsteriskEqualsToken",
+        "regex": "^\\*\\*="
+    },
+    {
+        "id": 69,
+        "name": "SlashEqualsToken",
+        "regex": "^\\/="
+    },
+    {
+        "id": 70,
+        "name": "PercentEqualsToken",
+        "regex": "^%="
+    },
+    {
+        "id": 71,
+        "name": "LessThanLessThanEqualsToken",
+        "regex": "^<<="
+    },
+    {
+        "id": 72,
+        "name": "GreaterThanGreaterThanEqualsToken",
+        "regex": "^>>="
+    },
+    {
+        "id": 73,
+        "name": "GreaterThanGreaterThanGreaterThanEqualsToken",
+        "regex": "^>>>="
+    },
+    {
+        "id": 74,
+        "name": "AmpersandEqualsToken",
+        "regex": "^&="
+    },
+    {
+        "id": 75,
+        "name": "BarEqualsToken",
+        "regex": "^\\|="
+    },
+    {
+        "id": 76,
+        "name": "BarBarEqualsToken",
+        "regex": "^\\|\\|="
+    },
+    {
+        "id": 77,
+        "name": "AmpersandAmpersandEqualsToken",
+        "regex": "^&&="
+    },
+    {
+        "id": 78,
+        "name": "QuestionQuestionEqualsToken",
+        "regex": "^\\?\\?="
+    },
+    {
+        "id": 79,
+        "name": "CaretEqualsToken",
+        "regex": "^\\^="
+    },
+    {
+        "id": 80,
+        "name": "Identifier",
+        "regex": "^[_a-zA-Z][_a-zA-Z0-9]*"
+    },
+    {
+        "id": 81,
+        "name": "PrivateIdentifier",
+        "regex": "^private"
+    },
+    {
+        "id": 83,
+        "name": "BreakKeyword",
+        "regex": "^break"
+    },
+    {
+        "id": 84,
+        "name": "CaseKeyword",
+        "regex": "^case"
+    },
+    {
+        "id": 85,
+        "name": "CatchKeyword",
+        "regex": "^catch"
+    },
+    {
+        "id": 86,
+        "name": "ClassKeyword",
+        "regex": "^class"
+    },
+    {
+        "id": 87,
+        "name": "ConstKeyword",
+        "regex": "^const"
+    },
+    {
+        "id": 88,
+        "name": "ContinueKeyword",
+        "regex": "^continue"
+    },
+    {
+        "id": 89,
+        "name": "DebuggerKeyword",
+        "regex": "^debugger"
+    },
+    {
+        "id": 90,
+        "name": "DefaultKeyword",
+        "regex": "^default"
+    },
+    {
+        "id": 91,
+        "name": "DeleteKeyword",
+        "regex": "^delete"
+    },
+    {
+        "id": 92,
+        "name": "DoKeyword",
+        "regex": "^do"
+    },
+    {
+        "id": 93,
+        "name": "ElseKeyword",
+        "regex": "^else"
+    },
+    {
+        "id": 94,
+        "name": "EnumKeyword",
+        "regex": "^enum"
+    },
+    {
+        "id": 95,
+        "name": "ExportKeyword",
+        "regex": "^export"
+    },
+    {
+        "id": 96,
+        "name": "ExtendsKeyword",
+        "regex": "^extends"
+    },
+    {
+        "id": 97,
+        "name": "FalseKeyword",
+        "regex": "^false"
+    },
+    {
+        "id": 98,
+        "name": "FinallyKeyword",
+        "regex": "^finally"
+    },
+    {
+        "id": 99,
+        "name": "ForKeyword",
+        "regex": "^for"
+    },
+    {
+        "id": 100,
+        "name": "FunctionKeyword",
+        "regex": "^function"
+    },
+    {
+        "id": 101,
+        "name": "IfKeyword",
+        "regex": "^if"
+    },
+    {
+        "id": 102,
+        "name": "ImportKeyword",
+        "regex": "^import"
+    },
+    {
+        "id": 103,
+        "name": "InKeyword",
+        "regex": "^in"
+    },
+    {
+        "id": 104,
+        "name": "InstanceOfKeyword",
+        "regex": "^instanceof"
+    },
+    {
+        "id": 105,
+        "name": "NewKeyword",
+        "regex": "^new"
+    },
+    {
+        "id": 106,
+        "name": "NullKeyword",
+        "regex": "^null"
+    },
+    {
+        "id": 107,
+        "name": "ReturnKeyword",
+        "regex": "^return"
+    },
+    {
+        "id": 108,
+        "name": "SuperKeyword",
+        "regex": "^super"
+    },
+    {
+        "id": 109,
+        "name": "SwitchKeyword",
+        "regex": "^switch"
+    },
+    {
+        "id": 110,
+        "name": "ThisKeyword",
+        "regex": "^this"
+    },
+    {
+        "id": 111,
+        "name": "ThrowKeyword",
+        "regex": "^throw"
+    },
+    {
+        "id": 112,
+        "name": "TrueKeyword",
+        "regex": "^true"
+    },
+    {
+        "id": 113,
+        "name": "TryKeyword",
+        "regex": "^try"
+    },
+    {
+        "id": 114,
+        "name": "TypeOfKeyword",
+        "regex": "^typeof"
+    },
+    {
+        "id": 115,
+        "name": "VarKeyword",
+        "regex": "^var"
+    },
+    {
+        "id": 116,
+        "name": "VoidKeyword",
+        "regex": "^void"
+    },
+    {
+        "id": 117,
+        "name": "WhileKeyword",
+        "regex": "^while"
+    },
+    {
+        "id": 118,
+        "name": "WithKeyword",
+        "regex": "^with"
+    },
+    {
+        "id": 119,
+        "name": "ImplementsKeyword",
+        "regex": "^implements"
+    },
+    {
+        "id": 120,
+        "name": "InterfaceKeyword",
+        "regex": "^interface"
+    },
+    {
+        "id": 121,
+        "name": "LetKeyword",
+        "regex": "^let"
+    },
+    {
+        "id": 122,
+        "name": "PackageKeyword",
+        "regex": "^package"
+    },
+    {
+        "id": 123,
+        "name": "PrivateKeyword",
+        "regex": "^private"
+    },
+    {
+        "id": 124,
+        "name": "ProtectedKeyword",
+        "regex": "^protected"
+    },
+    {
+        "id": 125,
+        "name": "PublicKeyword",
+        "regex": "^public"
+    },
+    {
+        "id": 126,
+        "name": "StaticKeyword",
+        "regex": "^static"
+    },
+    {
+        "id": 127,
+        "name": "YieldKeyword",
+        "regex": "^yield"
+    },
+    {
+        "id": 128,
+        "name": "AbstractKeyword",
+        "regex": "^abstract"
+    },
+    {
+        "id": 129,
+        "name": "AccessorKeyword",
+        "regex": "^accessor"
+    },
+    {
+        "id": 130,
+        "name": "AsKeyword",
+        "regex": "^as"
+    },
+    {
+        "id": 131,
+        "name": "AssertsKeyword",
+        "regex": "^asserts"
+    },
+    {
+        "id": 132,
+        "name": "AssertKeyword",
+        "regex": "^assert"
+    },
+    {
+        "id": 133,
+        "name": "AnyKeyword",
+        "regex": "^any"
+    },
+    {
+        "id": 134,
+        "name": "AsyncKeyword",
+        "regex": "^async"
+    },
+    {
+        "id": 135,
+        "name": "AwaitKeyword",
+        "regex": "^await"
+    },
+    {
+        "id": 136,
+        "name": "BooleanKeyword",
+        "regex": "^boolean"
+    },
+    {
+        "id": 137,
+        "name": "ConstructorKeyword",
+        "regex": "^constructor"
+    },
+    {
+        "id": 138,
+        "name": "DeclareKeyword",
+        "regex": "^declare"
+    },
+    {
+        "id": 139,
+        "name": "GetKeyword",
+        "regex": "^get"
+    },
+    {
+        "id": 140,
+        "name": "InferKeyword",
+        "regex": "^infer"
+    },
+    {
+        "id": 141,
+        "name": "IntrinsicKeyword",
+        "regex": "^intrinsic"
+    },
+    {
+        "id": 142,
+        "name": "IsKeyword",
+        "regex": "^is"
+    },
+    {
+        "id": 143,
+        "name": "KeyOfKeyword",
+        "regex": "^keyof"
+    },
+    {
+        "id": 144,
+        "name": "ModuleKeyword",
+        "regex": "^module"
+    },
+    {
+        "id": 145,
+        "name": "NamespaceKeyword",
+        "regex": "^namespace"
+    },
+    {
+        "id": 146,
+        "name": "NeverKeyword",
+        "regex": "^never"
+    },
+    {
+        "id": 147,
+        "name": "OutKeyword",
+        "regex": "^out"
+    },
+    {
+        "id": 148,
+        "name": "ReadonlyKeyword",
+        "regex": "^readonly"
+    },
+    {
+        "id": 149,
+        "name": "RequireKeyword",
+        "regex": "^require"
+    },
+    {
+        "id": 150,
+        "name": "NumberKeyword",
+        "regex": "^number"
+    },
+    {
+        "id": 151,
+        "name": "ObjectKeyword",
+        "regex": "^object"
+    },
+    {
+        "id": 152,
+        "name": "SatisfiesKeyword",
+        "regex": "^satisfies"
+    },
+    {
+        "id": 153,
+        "name": "SetKeyword",
+        "regex": "^set"
+    },
+    {
+        "id": 154,
+        "name": "StringKeyword",
+        "regex": "^string"
+    },
+    {
+        "id": 155,
+        "name": "SymbolKeyword",
+        "regex": "^symbol"
+    },
+    {
+        "id": 156,
+        "name": "TypeKeyword",
+        "regex": "^type"
+    },
+    {
+        "id": 157,
+        "name": "UndefinedKeyword",
+        "regex": "^undefined"
+    },
+    {
+        "id": 158,
+        "name": "UniqueKeyword",
+        "regex": "^unique"
+    },
+    {
+        "id": 159,
+        "name": "UnknownKeyword",
+        "regex": "^unknown"
+    },
+    {
+        "id": 160,
+        "name": "UsingKeyword",
+        "regex": "^using"
+    },
+    {
+        "id": 161,
+        "name": "FromKeyword",
+        "regex": "^from"
+    },
+    {
+        "id": 162,
+        "name": "GlobalKeyword",
+        "regex": "^global"
+    },
+    {
+        "id": 163,
+        "name": "BigIntKeyword",
+        "regex": "^bigint"
+    },
+    {
+        "id": 164,
+        "name": "OverrideKeyword",
+        "regex": "^override"
+    },
+    {
+        "id": 165,
+        "name": "OfKeyword",
+        "regex": "^of"
+    },
+    {
+        "id": -1,
+        "name": "MacroDefinition",
+        "regex": "^\\$[_a-zA-Z][_a-zA-Z0-9]*=(\\\\\\$|[^$])*\\$"
+    },
+    {
+        "id": -2,
+        "name": "MacroReplacement",
+        "regex": "^\\${{[_a-zA-Z][_a-zA-Z0-9]*}}\\$"
+    }
+]

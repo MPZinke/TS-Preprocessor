@@ -1,0 +1,15 @@
+{
+	"compilerOptions":
+	{
+		"declaration": true,
+		"module": "commonjs",
+		"noImplicitAny": true,
+		"outDir": "./lib",
+		"preserveConstEnums": true,
+		"removeComments": true,
+		"rootDir": "./Source",
+		"sourceMap": false,
+		"strict": true,
+		"target": "es2022"
+	}
+}
