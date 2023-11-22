@@ -17,72 +17,55 @@ interface Dirent
 }
 
 
-interface RecursiveStringArray extends Array<RecursiveStringArray|string>
-/*
-FROM: https://stackoverflow.com/a/51658344
-*/
-{}
+// FROM: https://stackoverflow.com/a/51658344
+interface RecursiveStringArray extends Array<RecursiveStringArray|string>{}
 
 
-async function get_files(directory: string): Promise<string[]>
+async function preprocess_directory(directory: string): Promise<Promise<void>[]>
 /*
 FROM: https://stackoverflow.com/a/45130990
 */
 {
+	const children_promises: Promise<void>[] = [];
+
 	const children: Dirent[] = await fs.promises.readdir(directory, { withFileTypes: true });
-	const files: RecursiveStringArray = await Promise.all(
-		children.map(
-			(child: Dirent) =>
-			{
-				const resolution = path.resolve(directory, child.name);
-				if(child.isDirectory())
-				{
-					return get_files(resolution)
-				}
+	for(const child of children)
+	{
+		const child_path = path.resolve(directory, child.name);
+		if(child.isDirectory())
+		{
+			children_promises.push(...(await preprocess_directory(child_path)).flat());
+		}
+		else if(child.name.match(/.*\.ts/) !== null)
+		{
+			children_promises.push(preprocess_file(child_path));
+		}
+	}
 
-				return resolution;
-			}
-		)
-	);
+	return children_promises;
+}
 
-	return (files.flat() as string[]).filter(path => path.match(/.*\.ts/) !== null);
+
+async function preprocess_file(filepath: string): Promise<void>
+{
+	const file_contents = await fs.promises.readFile(filepath, "utf8");
+	const lexer = new Lexer(filepath, file_contents);
+	console.log(`${lexer.filename}: ${lexer.tokens.length}`);
 }
 
 
 async function main()
 /*
-// Determine files
-// Read files
-// Parse files
 // Run macros on files
 // Write files
 */
 {
+	// Determine files
 	const tsconfig: string = fs.readFileSync("tsconfig.json", "utf8");
 	const config = JSON.parse(tsconfig);
 	const root_directory = path.resolve(config.compilerOptions!.rootDir || "./");
 
-	const files = await get_files(root_directory);
-	console.log(files);
-	// const file_contents = await fs.promises.readFile(files[0], "utf8");
-	// const lexer = new Lexer(files[0], file_contents);
-	// console.log(lexer.tokens);
-
-	const token_streams = await Promise.all(
-		files.map(
-			async (filepath: string) =>
-			{
-				console.log(filepath);
-				const file_contents = await fs.promises.readFile(filepath, "utf8");
-				const lexer = new Lexer(filepath, file_contents);
-				console.log(lexer.tokens);
-			}
-		)
-	);
-	// for(const file of files)
-	// {
-	// 	console.log(file);
-	// }
+	await Promise.all(await preprocess_directory(root_directory));
 }
 
 
