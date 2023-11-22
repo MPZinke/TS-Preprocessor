@@ -58,28 +58,27 @@ async function main()
 // Write files
 */
 {
-	console.log("Starting");
 	const tsconfig: string = fs.readFileSync("tsconfig.json", "utf8");
 	const config = JSON.parse(tsconfig);
 	const root_directory = path.resolve(config.compilerOptions!.rootDir || "./");
 
 	const files = await get_files(root_directory);
 	console.log(files);
-	const file_contents = await fs.promises.readFile(files[0], "utf8");
-	const lexer = new Lexer(files[0], file_contents);
-	console.log(lexer.tokens);
+	// const file_contents = await fs.promises.readFile(files[0], "utf8");
+	// const lexer = new Lexer(files[0], file_contents);
+	// console.log(lexer.tokens);
 
-	// const token_streams = await Promise.all(
-	// 	files.map(
-	// 		async (file) =>
-	// 		{
-	// 			console.log(file);
-	// 			const file_contents = await fs.promises.readFile(file, "utf8");
-	// 			const lexer = new Lexer(file_contents);
-	// 			console.log(lexer.tokens);
-	// 		}
-	// 	)
-	// );
+	const token_streams = await Promise.all(
+		files.map(
+			async (filepath: string) =>
+			{
+				console.log(filepath);
+				const file_contents = await fs.promises.readFile(filepath, "utf8");
+				const lexer = new Lexer(filepath, file_contents);
+				console.log(lexer.tokens);
+			}
+		)
+	);
 	// for(const file of files)
 	// {
 	// 	console.log(file);
